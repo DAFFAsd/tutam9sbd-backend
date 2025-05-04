@@ -11,13 +11,12 @@ dotenv.config();
 const port = 8000;
 const app = express();
 
-// Configure CORS with specific options
+
 app.use(cors({
   origin: ['https://tutam9sbd-frontend.vercel.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-  optionsSuccessStatus: 200
 }));
 
 app.use(bodyParser.json());
